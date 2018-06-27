@@ -2,6 +2,7 @@
 
 ```
 $ docker build --no-cache -t u12_core -f u12_core .
+$ docker run -p 49162:80 -d app/dash:latest
 
 #Linux
 #Containers
