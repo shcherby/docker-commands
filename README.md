@@ -4,6 +4,7 @@
 $ docker build --no-cache -t u12_core -f u12_core .
 $ docker run -p 49162:80 -d <image label>:latest
 $ docker exec -it <container id> /bin/bash
+$ docker stop <container id>
 
 #Linux
 #Containers
