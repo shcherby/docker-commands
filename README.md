@@ -6,6 +6,7 @@ $ docker run -p 49162:80 -d <image label>:latest
 $ docker exec -it <container id> /bin/bash
 $ docker stop <container id>
 $ docker logs --follow <container id>
+$ docker run -v d:/data:/data <image_name>
 
 #Linux
 #Containers
