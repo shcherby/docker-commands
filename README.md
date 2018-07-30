@@ -7,6 +7,8 @@ $ docker exec -it <container id> /bin/bash
 $ docker stop <container id>
 $ docker logs --follow <container id>
 $ docker run -v d:/data:/data <image_name>
+$ docker stats <container id> --all --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"
+
 
 #Linux
 #Containers
