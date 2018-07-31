@@ -13,7 +13,6 @@ $ docker ps -a
 $ docker run -i -t -v /var/app/current:/usr/src/app/ <image_name> /bin/bash
 $ docker run -i -t -e FOO=foo -e BAR=bar <image_name> /bin/bash
 
-
 #Linux
 #Containers
 $ docker rm $(docker ps -a -q)
@@ -29,3 +28,6 @@ $ FOR /f "tokens=*" %i IN ('docker ps -a -q') DO docker rm %i
 $ FOR /f "tokens=*" %i IN ('docker images -q -f "dangling=true"') DO docker rmi %i
 
 ```
+
+Run node environment
+$ docker run --entrypoint /bin/bash -p 49165:3000 -v /projects/calculator:/usr/src/app -w /usr/src/app  -i -t node:10
