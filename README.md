@@ -9,6 +9,10 @@ $ docker logs --follow <container id>
 $ docker run -v d:/data:/data <image_name>
 $ docker stats <container id> --all --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"
 
+$ docker ps -a
+$ docker run -i -t -v /var/app/current:/usr/src/app/ <image_name> /bin/bash
+$ docker run -i -t -e FOO=foo -e BAR=bar <image_name> /bin/bash
+
 
 #Linux
 #Containers
