@@ -13,6 +13,9 @@ $ docker ps -a
 $ docker run -i -t -v /var/app/current:/usr/src/app/ <image_name> /bin/bash
 $ docker run -i -t -e FOO=foo -e BAR=bar <image_name> /bin/bash
 
+$docker run -v c:/temp/ssl:/work -it frapsoft/openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout privateKey.key -out /work/certificate.crt  ### generate SSL certificate
+
+
 #Linux
 #Containers
 $ docker rm $(docker ps -a -q)
