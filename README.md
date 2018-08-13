@@ -32,7 +32,7 @@ $ FOR /f "tokens=*" %i IN ('docker images -q -f "dangling=true"') DO docker rmi 
 
 
 Run node environment
-$ docker run --entrypoint /bin/bash -p 49165:3000 -v ${pwd}:/usr/src/app -w /usr/src/app  -i -t node:10
+$ docker run --entrypoint /bin/bash -p 49165:3000 -v $(pwd):/usr/src/app -w /usr/src/app  -i -t node:10
 
 ```
 
