@@ -45,6 +45,8 @@ $ docker run -p 8433:80 --network=sw-net --name sw-web docker-web  # connect con
 $ docker network inspect sw-net                                    # validate if containers in network       
 $ docker run -i -t ellerbrock/alpine-bash-curl-ssl /bin/bash       # send request from container by name
 $ curl http://sw-web/api
+
+$ docker network connect <network_name> <containerid>
 ```
 
 
