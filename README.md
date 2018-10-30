@@ -38,6 +38,15 @@ Run curl in container
 $ docker run -i -t ellerbrock/alpine-bash-curl-ssl /bin/bash
 ```
 
+### Connect containers by container name
+```
+$ docker network create --driver bridge sw-net                     # craete network with name "sw-net"
+$ docker run -p 8433:80 --network=sw-net --name sw-web docker-web  # connect container to network "sw-net" setup container name "sw-web"
+$ docker network inspect sw-net                                    # validate if containers in network       
+$ docker run -i -t ellerbrock/alpine-bash-curl-ssl /bin/bash       # send request from container by name
+$ curl http://sw-web/api
+```
+
 
 
 
