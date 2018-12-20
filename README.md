@@ -38,6 +38,12 @@ Run curl in container
 $ docker run -i -t ellerbrock/alpine-bash-curl-ssl /bin/bash
 ```
 
+### Save/load images to/from filesystem
+```
+docker save -o c:/myfile.tar centos:16
+docker load -i c:/myfile.tar
+```
+
 ### Connect containers by container name
 ```
 $ docker network create --driver bridge sw-net                     # craete network with name "sw-net"
