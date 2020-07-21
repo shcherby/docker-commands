@@ -7,6 +7,7 @@ $ docker exec -it <container id> /bin/bash
 $ docker stop <container id>
 $ docker logs --follow <container id>
 $ docker run -v d:/data:/data <image_name>
+$ docker run -v %cd%/data:/data <image_name> #windows current directory path
 $ docker stats <container id> --all --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"
 
 $ docker ps -a
