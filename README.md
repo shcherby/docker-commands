@@ -8,6 +8,7 @@ $ docker stop <container id>
 $ docker logs --follow <container id>
 $ docker run -v d:/data:/data <image_name>
 $ docker run -v %cd%/data:/data <image_name> #windows current directory path
+$ docker run --rm -it -v ${PWD}:/usr/src/project gcc:4.9 # powershell current path
 $ docker stats <container id> --all --format "table {{.Container}}\t{{.CPUPerc}}\t{{.MemUsage}}"
 
 $ docker ps -a
