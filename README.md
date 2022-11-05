@@ -8,7 +8,7 @@ docker login azure
 docker context create aci myacicontext  --subscription-id 446247d4-0807-4bc1-9f14 --resource-group antondoctests --location westeurope
 docker context use myacicontext
 docker run -p 80:80 nginx
-az group delete -n antondoctests -y -f
+az group delete -n antondoctests -y --no-wait
 ```
 
 ```
