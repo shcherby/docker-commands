@@ -1,15 +1,4 @@
 # docker-commands
-## Run container in azure container instance
-[aci-integration](https://docs.docker.com/cloud/aci-integration/)
-```
-az account list-locations -o table
-az group create -l westeurope -n antondoctests
-docker login azure
-docker context create aci myacicontext  --subscription-id 446247d4-0807-4bc1-9f14 --resource-group antondoctests --location westeurope
-docker context use myacicontext
-docker run -p 80:80 nginx
-az group delete -n antondoctests -y --no-wait
-```
 
 ```
 $ docker build --no-cache -t=app/dash:latest .
