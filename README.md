@@ -1,6 +1,7 @@
 # docker-commands
 
 ```
+$ docker system prune -a Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes.
 $ docker build --no-cache -t=app/dash:latest .
 $ docker run -p 49162:80 -d <image label>:latest
 $ docker exec -it <container id> /bin/bash
