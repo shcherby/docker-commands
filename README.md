@@ -57,8 +57,22 @@ $ curl http://sw-web/api
 
 $ docker network connect <network_name> <containerid>
 ```
+### Docker build
+--progress plain: log all build steps
+--no-cache: build without cache
+```
+docker build --build-arg VERSION=1.0.0 -f ./Dockerfile -t local:test --no-cache --progress plain .
+```
 
-
+### Optimize the docker image build layers cache
+#### Show cache by layers
+```bash
+docker buildx du --verbose
+```
+#### Delete only if build cache more then 30gb
+```
+docker buildx prune --filter=type=source.local --force --keep-storage=30gb
+```
 
 # Docker Http Client
 * [Docker Http Client Test](https://github.com/khdevnet/docker-commands/blob/master/DockerClient.Tests/README.md)
