@@ -41,7 +41,7 @@ Run curl in container
 $ docker run -i -t ellerbrock/alpine-bash-curl-ssl /bin/bash
 ```
 
-### Save/load images to/from filesystem
+### Save/load images to/from the filesystem
 ```
 docker save -o c:/myfile.tar centos:16
 docker load -i c:/myfile.tar
@@ -60,6 +60,7 @@ $ docker network connect <network_name> <containerid>
 ### Docker build
 --progress plain: log all build steps
 --no-cache: build without cache
+--force-rm: Always remove intermediate containers
 ```
 docker build --build-arg VERSION=1.0.0 -f ./Dockerfile -t local:test --no-cache --progress plain .
 ```
